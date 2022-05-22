@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+    <title>Osam Template</title>
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        @media(min-width: 992px) {
+            .content {
+                padding: 3rem 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <span class="align-middle">Admin</span>
+                </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">기본관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <span class="align-middle">단어</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <span class="align-middle">문장</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">교재관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <span class="align-middle">단어장</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">문법</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="exam.html">
+                            <span class="align-middle">시험지</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">회원관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">신규회원</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">회원목록</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">숙제확인</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">시험확인</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">게시판 관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">공지사항</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">QnA</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">시스템</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">코드관리</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">메뉴관리</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">권한관리</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                <div class="position-relative">
+                                    <i class="align-middle" data-feather="bell"></i>
+                                    <span class="indicator">4</span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+                                <div class="dropdown-menu-header">
+                                    4 New Notifications
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-danger" data-feather="alert-circle"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Update completed</div>
+                                                <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                                <div class="text-muted small mt-1">30m ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-warning" data-feather="bell"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Lorem ipsum</div>
+                                                <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                                                <div class="text-muted small mt-1">2h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-primary" data-feather="home"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Login from 192.186.1.8</div>
+                                                <div class="text-muted small mt-1">5h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-success" data-feather="user-plus"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">New connection</div>
+                                                <div class="text-muted small mt-1">Christina accepted your request.</div>
+                                                <div class="text-muted small mt-1">14h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu-footer">
+                                    <a href="#" class="text-muted">Show all notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <i class="align-middle" data-feather="settings"></i>
+                            </a>
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <!-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />  -->
+                                <span class="text-dark">Name</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+                    <h1 class="h3 mb-3">시험지 등록</h1>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">시험지 목록 화면입니다.</h5>
+                                    <h6 class="card-subtitle text-muted">
+                                        해석 시험지, 작문 시험지, (팝업)교재별 사용 문장 리스트 불러오기
+                                    </h6>
+                                    <div style="text-align: right;">
+                                        <button type="button" class="btn btn-primary mb-2">등록</button>
+                                        <button type="button" class="btn btn-warning mb-2">취소</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label class="col-form-label">분류</label>
+                                                <select class="form-select mb-3">                                                    
+                                                    <option>내신</option>
+                                                    <option>수능</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label class="col-form-label">시험종류</label>
+                                                <select class="form-select mb-3">
+                                                    <option>해석</option>
+                                                    <option>해석 + 문법선택</option>
+                                                    <option>작문</option>
+                                                    <option>작문 + 문법선택</option>
+                                                    <option>괄호넣기</option>
+                                                    <option>순서맞추기</option>
+                                                    <option>선다형</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-form-label">대상 (학년)</label>
+                                            <div class="mb-3">
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="ALL">
+                                                    <span class="form-check-label">전체</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M1">
+                                                    <span class="form-check-label">중1</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M2">
+                                                    <span class="form-check-label">중2</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M3">
+                                                    <span class="form-check-label">중3</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="H1">
+                                                    <span class="form-check-label">고1</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="H2">
+                                                    <span class="form-check-label">고2</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="H3">
+                                                    <span class="form-check-label">고3</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-form-label">대상 (학교)</label>
+                                            <div class="mb-3">
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="ALL">
+                                                    <span class="form-check-label">전체</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M1">
+                                                    <span class="form-check-label">평내중</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M2">
+                                                    <span class="form-check-label">장내중</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M2">
+                                                    <span class="form-check-label">판곡중</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M2">
+                                                    <span class="form-check-label">하랑중</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="M3">
+                                                    <span class="form-check-label">평내고</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value="H1">
+                                                    <span class="form-check-label">판곡고</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <button type="button" class="btn btn-primary mb-2">추가</button>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered mb-0">
+                                                <thead>
+                                                    <tr style="text-align: center;">
+                                                        <th scope="col" style="width: 10px;">정렬순서</th>
+                                                        <th scope="col" style="width: 40%;">문제</th>
+                                                        <th scope="col" style="width: 40%;">정답</th>
+                                                        <th scope="col" style="width: 10%;">비고</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="text-align: center;cursor: move;">
+                                                            <i class="align-middle me-2" data-feather="grid"></i>
+                                                            <!-- <input type="number"> -->
+                                                        </td>
+                                                        <td>
+                                                            <textarea class="form-control" rows="2" placeholder="문제입력"></textarea>
+                                                        </td>
+                                                        <td>
+                                                            <textarea class="form-control" rows="2" placeholder="정답입력"></textarea>
+                                                        </td>
+                                                        <td style="text-align: center;">
+                                                            <!-- <button type="button" class="btn btn-danger">삭제</button> -->
+                                                            <i class="align-middle me-2" data-feather="trash-2"></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+<!-- https://demo.adminkit.io/tables-bootstrap.html -->

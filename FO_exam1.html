@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <!-- bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <!-- template -->
+    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+    <title>Osam Template</title>
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- custom -->
+    <link href="common.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <span class="align-middle">User</span>
+                </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">교재관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_word.html">
+                            <span class="align-middle">단어장</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_bookList.html">
+                            <span class="align-middle">문법</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="FO_examList.html">
+                            <span class="align-middle">시험</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">회원관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">숙제현황</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">시험현황</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">내 정보관리</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">게시판 관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">1:1 문의</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="">
+                            <span class="align-middle">QnA</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <!-- 기존 -->
+                            <!-- <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown"> -->
+                            <!-- Bootstrap5 -->
+                            <a class="nav-icon" onclick="fn_dropdownToggle1();">
+                                <div class="position-relative">
+                                    <i class="align-middle" data-feather="bell"></i>
+                                    <span class="indicator">4</span>
+                                </div>
+                            </a>
+                            <!-- 기존 -->
+                            <!-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown" id="dropdownTarget"> -->
+                            <!-- Bootstrap5 -->
+                            <div class="collapse dropdown-menu dropdown-menu-lg" id="dropdownTarget1" style="display: none;">
+                                <div class="dropdown-menu-header">
+                                    4 New Notifications
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-danger" data-feather="alert-circle"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Update completed</div>
+                                                <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                                <div class="text-muted small mt-1">30m ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-warning" data-feather="bell"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Lorem ipsum</div>
+                                                <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                                                <div class="text-muted small mt-1">2h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-primary" data-feather="home"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Login from 192.186.1.8</div>
+                                                <div class="text-muted small mt-1">5h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-success" data-feather="user-plus"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">New connection</div>
+                                                <div class="text-muted small mt-1">Christina accepted your request.</div>
+                                                <div class="text-muted small mt-1">14h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu-footer">
+                                    <a href="#" class="text-muted">Show all notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown" onclick="fn_dropdownToggle2();">
+                                <!-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />  -->
+                                <span class="text-dark">Name</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" id="dropdownTarget2" style="display: none;max-width: 160px;">
+                                <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+                    <div class="mb-3">
+                        <h1 class="h3" style="display: inline;">동명사구를 주어로 사용한 경우</h1>
+
+                        <div style="float: right;">
+                            <button type="button" class="btn btn-primary" id="btnSave">제출</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div style="text-align: center;">
+                                        <img src="img/exam01.jpg" style="width: 80%;height: auto;">
+                                    </div>
+                                    <form id="exam1" class="mt-5">
+                                        <div style="display: flex;align-items: center;">
+                                            <p class="mb-0"><strong>1R. 주어진 문장의 해석을 쓰시오.</strong></p>
+
+                                            <button type="button" class="btn btn-danger btn-sm" id="btnShowAnswerR1" data-flag="N" style="margin-left: 20px;">
+                                                답안지 보기 (0)
+                                            </button>
+                                            <button type="button" class="btn btn-warning btn-sm" id="btnInitR1" style="margin-left: 20px;">초기화</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">1 Fishing is one of my favorite hobbies.</label>
+                                                <input type="text" class="form-control" id="r1-1" placeholder="Enter Answer" name="r1-1">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">낚시는 내가 가장 좋아하는 취미중에 하나이다</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">2 Watching TV lets me waste time.</label>
+                                                <input type="text" class="form-control" id="r1-2" placeholder="Enter Answer" name="r1-2">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">TV를 보는 것은 내가 시간을 낭비하도록 하게 한다</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">3 Eating fast food is sometimes very helpful.</label>
+                                                <input type="text" class="form-control" id="r1-3" placeholder="Enter Answer" name="r1-3">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">패스트푸드를 먹는 것은 때때로 매우 도움이 된다</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">4 Not sleeping till late is my new year's goal.</label>
+                                                <input type="text" class="form-control" id="r1-4" placeholder="Enter Answer" name="r1-4">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">늦게까지 자지 않는 것은 나의 새해의 목표이다</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">5 Cleaning my room is very hard.</label>
+                                                <input type="text" class="form-control" id="r1-5" placeholder="Enter Answer" name="r1-5">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">나의 방을 치우는 것은 매우 어렵다</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">6 Eating hamburger make bad health.</label>
+                                                <input type="text" class="form-control" id="r1-6" placeholder="Enter Answer" name="r1-6">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">햄버거를 먹는 것은 건강을 나쁘게 만든다</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">7 Thinking easy is pretty difficult.</label>
+                                                <input type="text" class="form-control" id="r1-7" placeholder="Enter Answer" name="r1-7">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">쉽게 생각하는 것은 꽤 어렵다</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">8 Drinking a lot of water is good.</label>
+                                                <input type="text" class="form-control" id="r1-8" placeholder="Enter Answer" name="r1-8">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">많은 물을 마시는 것은 좋다</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">9 Finishing homework isn't important.</label>
+                                                <input type="text" class="form-control" id="r1-9" placeholder="Enter Answer" name="r1-9">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">숙제를 마치는 것은 중요하지 않다</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">10 Having breakfast make me happy.</label>
+                                                <input type="text" class="form-control" id="r1-10" placeholder="Enter Answer" name="r1-10">
+                                                <span class="answer-r1" style="display: none;color: #ff3399;">아침 식사를 하는 것은 나를 기쁘게 만든다</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-5" style="display: flex;align-items: center;">
+                                            <p class="mb-0"><strong>1W. 주어진 문장을 영어로 쓰시오.</strong></p>
+
+                                            <button type="button" class="btn btn-danger btn-sm" id="btnShowAnswerW1" data-flag="N" style="margin-left: 20px;">
+                                                답안지 보기 (0)
+                                            </button>
+                                            <button type="button" class="btn btn-warning btn-sm" id="btnInitW1" style="margin-left: 20px;">초기화</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">1 영어를 배우는 것은 때때로 지루했다.</label>
+                                                <input type="text" class="form-control" id="w1-1" placeholder="Enter Answer" name="w1-1">
+                                                <span class="answer-w1" style="display: none;color: #ff3399;">Learning English is sometimes boring.</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">2 책을 쓰는 것은 많은 경험을 필요로 한다.</label>
+                                                <input type="text" class="form-control" id="w1-2" placeholder="Enter Answer" name="w1-2">
+                                                <span class="answer-w1" style="display: none;color: #ff3399;">Writing books needs many experiences.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">3 우리는 타인을 비판하는 것을 피하는 것이 좋다.</label>
+                                                <input type="text" class="form-control" id="w1-3" placeholder="Enter Answer" name="w1-3">
+                                                <span class="answer-w1" style="display: none;color: #ff3399;">We had better avoid criticizing other people.</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">4 그 젊은 작가들을 만나는 것은 의미있을 것이다.</label>
+                                                <input type="text" class="form-control" id="w1-4" placeholder="Enter Answer" name="w1-4">
+                                                <span class="answer-w1" style="display: none;color: #ff3399;">Meeting the young writers would be awful.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="r1-1" class="form-label">5 수업을 방해하는 것은 용서되지 않을 것이다.</label>
+                                                <input type="text" class="form-control" id="w1-5" placeholder="Enter Answer" name="w1-5">
+                                                <span class="answer-w1" style="display: none;color: #ff3399;">Interrupting the lesson wont't be forgiven.</span>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mt-3">
+                                                <label for="w1-2" class="form-label">6 그 새로운 재료들을 함께 섞지 않는 것이 더 좋다.</label>
+                                                <input type="text" class="form-control" id="w1-6" placeholder="Enter Answer" name="w1-6">
+                                                <span class="answer-w1" style="display: none;color: #ff3399;">Not mixing the new gredients together is better.</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- .card body -->
+                            </div>
+                            <!-- .card -->
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="component.js"></script>
+    <script>
+        let obj = {
+            showAnswerR1: 0,
+            showAnswerW1: 0
+        };
+
+        $(document).ready(function() {
+
+            $('#btnSave').click(function() {
+                if (confirm('시험지를 제출하시겠습니까?')) {
+                    alert('제출되었습니다.');
+                }
+            });
+
+            $('#btnShowAnswerR1').click(function(e) {
+                let me = $(e.currentTarget);
+                let flag = $(me).data('flag');
+
+                if (flag === 'N') {
+                    obj.showAnswerR1 = Number(obj.showAnswerR1) + 1;
+
+                    let btnText = '답안지 닫기 (' + obj.showAnswerR1 + ')';
+
+                    $(me).data('flag', 'Y');
+                    $(me).text(btnText);
+                    $('.answer-r1').show();
+                } else {
+                    let btnText = '답안지 보기 (' + obj.showAnswerR1 + ')';
+
+                    $(me).data('flag', 'N');
+                    $(me).text(btnText);
+                    $('.answer-r1').hide();
+                }
+            });
+
+            $('#btnInitR1').click(function() {
+                if (confirm('초기화 하시겠습니까?')) {
+                    $('[id^=r1]').val('');
+                }
+            });
+
+            $('#btnShowAnswerW1').click(function(e) {
+                let me = $(e.currentTarget);
+                let flag = $(me).data('flag');
+
+                if (flag === 'N') {
+                    obj.showAnswerW1 = Number(obj.showAnswerW1) + 1;
+
+                    let btnText = '답안지 닫기 (' + obj.showAnswerW1 + ')';
+
+                    $(me).data('flag', 'Y');
+                    $(me).text(btnText);
+                    $('.answer-w1').show();
+                } else {
+                    let btnText = '답안지 보기 (' + obj.showAnswerW1 + ')';
+
+                    $(me).data('flag', 'N');
+                    $(me).text(btnText);
+                    $('.answer-w1').hide();
+                }
+            });
+
+            $('#btnInitW1').click(function() {
+                if (confirm('초기화 하시겠습니까?')) {
+                    $('[id^=w1]').val('');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- https://demo.adminkit.io/tables-bootstrap.html -->
