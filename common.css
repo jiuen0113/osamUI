@@ -33,3 +33,14 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.timer.time-desc {
+    margin-right: 20px;
+    line-height: 21px;
+    color: red;
+    font-size: 15px;
+}
+
+.timer.time-desc span {
+    vertical-align: middle;
+}
