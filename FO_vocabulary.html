@@ -48,39 +48,39 @@
                 </li>
                 <li class="sidebar-header">교재관리</li>
                 <li class="sidebar-item active">
-                    <a class="sidebar-link" href="FO_word.html">
+                    <a class="sidebar-link" href="FO_vocabulary.html">
                         <span class="align-middle">단어장</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="FO_bookList.html">
+                    <a class="sidebar-link" href="FO_grammar.html">
                         <span class="align-middle">문법</span>
                     </a>
                 </li>
                 <li class="sidebar-header">회원관리</li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="FO_homeworkList.html">
+                    <a class="sidebar-link" href="FO_homework.html">
                         <span class="align-middle">숙제현황</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="FO_examResultList.html">
+                    <a class="sidebar-link" href="FO_exam.html">
                         <span class="align-middle">시험현황</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="FO_profile.html">
+                    <a class="sidebar-link" href="FO_myPage.html">
                         <span class="align-middle">내 정보관리</span>
                     </a>
                 </li>
                 <li class="sidebar-header">게시판 관리</li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="FO_boardList.html">
+                    <a class="sidebar-link" href="FO_question.html">
                         <span class="align-middle">1:1 문의</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="FO_qnaList.html">
+                    <a class="sidebar-link" href="FO_qna.html">
                         <span class="align-middle">QnA</span>
                     </a>
                 </li>
@@ -261,7 +261,7 @@
                     <div class="mb-3 row">
                         <label class="col-form-label col-sm-3 text-sm-end">시험유형</label>
                         <div class="col-sm-9">
-                            <select class="form-control">
+                            <select class="form-control" id="testType">
                                 <option value="01" selected>영단어</option>
                                 <option value="02">의미</option>
                             </select>
@@ -319,7 +319,7 @@
 <script src="js/app.js"></script>
 <script src="component.js"></script>
 <script>
-        let timer = 0;
+        let timer;
         let obj = {
             arry: ['1'],
             words: { // Class 선언
@@ -448,7 +448,7 @@
                         html.push('</p>');
                         html.push('<input type="text" class="form-control" value="');
                         html.push(el.mean);
-                        html.push('"">');
+                        html.push('" placeholder="Enter Answer Here">');
                         html.push('</div>');
                         html.push('</div>');
 
@@ -460,7 +460,61 @@
                     });
                     $('#wordList').html(html.join(''));
                 }
-                //console.log(wordList);
+            },
+            drawWordReverse: function() {
+                let tar = $('#chList').find('button');
+                let chapter = [],
+                    wordList = [];
+
+                // 선택된 강의 확인
+                tar.each(function(idx, el) {
+                    chapter.push($(el).data('value'));
+                });
+
+                // 단어목록 확인
+                if (chapter.length > 0) {
+
+                    let words = this.words;
+
+                    chapter.forEach(function(el, idx) {
+
+                        let list = words[el];
+
+                        list.forEach(function(el2, idx2) {
+                            wordList.push(el2);
+                        });
+                    });
+                }
+
+                // 단어장 그리기
+                if (wordList.length > 0) {
+
+                    // 단어장 초기화
+                    $('#wordList').html('');
+                    let html = [];
+
+                    wordList.forEach(function(el, idx) {
+                        if ((idx == 0) || ((idx % 6) == 0)) {
+                            html.push('<div class = "row">');
+                        }
+
+                        html.push('<div class="col-12 col-lg-2 card mb-3 bg-light border wordTest">');
+                        html.push('<div class="card-body p-3">');
+                        html.push('<p>');
+                        html.push(el.mean);
+                        html.push('</p>');
+                        html.push('<input type="text" class="form-control" value="" placeholder="Enter Answer Here">');
+                        html.push('</div>');
+                        html.push('</div>');
+
+                        if (idx == 5) {
+                            html.push('</div>');
+                        } else if ((idx > 6) && ((idx % 6) == 5)) {
+                            html.push('</div>');
+                        }
+                    });
+                    $('#wordList').html(html.join(''));
+                }
             },
             drawChaper: function() {
                 // 강의 선택 영역 초기화
@@ -513,6 +567,7 @@
 
             // 시험시작
             $('#btnTestStart').click(function() {
+                var testType = $('#testType option:selected').val();
                 var testTime = $('#testTime option:selected').val();
 
                 // 버튼
@@ -526,6 +581,12 @@
 
                 // close modal
                 $('#testModal').modal('hide');
+
+                if (testType == '01') {
+                    obj.drawWordReverse();
+                } else {
+                    $('div.wordTest input').val('');
+                }
 
                 // 시험시간
                 $('.num-box.min').text(testTime);
@@ -565,24 +626,19 @@
         function startTimer() {
             let target = $('.time-desc');
 
-            clearInterval(timer);
-
-            let testTime = Number($('.num-box.min').text()) * 60;
+            let time = Number($('.num-box.min').text()) * 60, // 실행시간
+                min = 0, // 분
+                sec = 0; // 초
 
             timer = setInterval(function() {
-                let interval = timer++;
-                let sec = Number(testTime) - interval;
+                min = parseInt(time / 60);
+                sec = time % 60;
+                time--;
 
-                if (sec > 0) {
-                    let min = parseInt(sec / 60);
-                    sec = (sec - (min * 60));
+                $('.num-box.min').text(min);
+                $('.num-box.sec').text(sec);
 
-                    $('.num-box.min').text(min);
-                    $('.num-box.sec').text(sec);
-
-                    console.log('min ::: ' + min);
-                    console.log('sec ::: ' + sec);
-                } else {
+                if (time < 0) {
                     // 시험종료
                     alert('시험이 종료되었습니다.');
                     init();
@@ -591,7 +647,6 @@
         }
 
         function stopTimer() {
-            timer = 0;
             clearInterval(timer);
             $('.num-box.min').text(0);
             $('.num-box.sec').text(0);

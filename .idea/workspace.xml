@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89dd273a-6998-41b0-88e7-7db005d14f6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="89dd273a-6998-41b0-88e7-7db005d14f6b" name="Changes" comment="단어장 수정">
+      <change afterPath="$PROJECT_DIR$/FO_grammar_detail04.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FO_homework_detail01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/book04.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_board1.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_question_detail01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_boardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_book1.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_grammar_detail01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_book2.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_grammar_detail02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_book3.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_grammar_detail03.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_bookList.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_grammar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FO_homeworkList.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_homework.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FO_vocabulary.html" beforeDir="false" afterPath="$PROJECT_DIR$/FO_vocabulary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/osam.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/itellij/osam/untitled"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\itellij\osam\untitled" />
+      <recent name="C:\itellij\osam\untitled\img" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,6 +63,14 @@
       <option name="presentableId" value="Default" />
       <updated>1653192203520</updated>
     </task>
+    <task id="LOCAL-00001" summary="단어장 수정">
+      <created>1654417577603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654417577603</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -60,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="단어장 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="단어장 수정" />
   </component>
 </project>

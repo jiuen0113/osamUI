@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <!-- bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <!-- template -->
+    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+    <title>Osam Template</title>
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- custom -->
+    <link href="common.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <span class="align-middle">User</span>
+                </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">교재관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_vocabulary.html">
+                            <span class="align-middle">단어장</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="FO_grammar.html">
+                            <span class="align-middle">문법</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">회원관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_homework.html">
+                            <span class="align-middle">숙제현황</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_exam.html">
+                            <span class="align-middle">시험현황</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_myPage.html">
+                            <span class="align-middle">내 정보관리</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-header">게시판 관리</li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_question.html">
+                            <span class="align-middle">1:1 문의</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="FO_qna.html">
+                            <span class="align-middle">QnA</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <!-- 기존 -->
+                            <!-- <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown"> -->
+                            <!-- Bootstrap5 -->
+                            <a class="nav-icon" onclick="fn_dropdownToggle1();">
+                                <div class="position-relative">
+                                    <i class="align-middle" data-feather="bell"></i>
+                                    <span class="indicator">4</span>
+                                </div>
+                            </a>
+                            <!-- 기존 -->
+                            <!-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown" id="dropdownTarget"> -->
+                            <!-- Bootstrap5 -->
+                            <div class="collapse dropdown-menu dropdown-menu-lg" id="dropdownTarget1" style="display: none;">
+                                <div class="dropdown-menu-header">
+                                    4 New Notifications
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-danger" data-feather="alert-circle"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Update completed</div>
+                                                <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                                <div class="text-muted small mt-1">30m ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-warning" data-feather="bell"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Lorem ipsum</div>
+                                                <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                                                <div class="text-muted small mt-1">2h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-primary" data-feather="home"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Login from 192.186.1.8</div>
+                                                <div class="text-muted small mt-1">5h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-success" data-feather="user-plus"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">New connection</div>
+                                                <div class="text-muted small mt-1">Christina accepted your request.</div>
+                                                <div class="text-muted small mt-1">14h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu-footer">
+                                    <a href="#" class="text-muted">Show all notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown" onclick="fn_dropdownToggle2();">
+                                <!-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />  -->
+                                <span class="text-dark">Name</span>
+                            </a>
+                            <!-- <div class="dropdown-menu dropdown-menu-end"> -->
+                            <div class="dropdown-menu dropdown-menu-end" id="dropdownTarget2" style="display: none;max-width: 160px;">
+                                <a class="dropdown-item" href="FO_myPage.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="FO_signin.html">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+                    <h1 class="h3 mb-3">Expression 발음과 알파벳(2)</h1>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div style="text-align: center;margin-bottom: 40px;">
+                                        <img src="img/book04.jpg" style="width: 70%;height: auto;">
+                                    </div>
+                                    <form id="r1" class="mt-5">
+                                        <div style="display: flex;align-items: center;">
+                                            <p class="mb-0"><strong>1-R-1. 주어진 문제의 발음을 쓰시오.</strong></p>
+                                            <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px;">채점하기</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-1" class="form-label">1.B+ACK</label>
+                                                <input type="text" class="form-control" id="R1-1" placeholder="Enter Answer" name="R1-1">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-2" class="form-label">2.C+AR</label>
+                                                <input type="text" class="form-control" id="R1-2" placeholder="Enter Answer" name="R1-2">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-3" class="form-label">3.CH+AR</label>
+                                                <input type="text" class="form-control" id="R1-3" placeholder="Enter Answer" name="R1-3">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">4.DE+CK</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">5.LOO+K</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">6.GE+N</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-1" class="form-label">7.HI+M</label>
+                                                <input type="text" class="form-control" id="R1-1" placeholder="Enter Answer" name="R1-1">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-2" class="form-label">8.L+AW</label>
+                                                <input type="text" class="form-control" id="R1-2" placeholder="Enter Answer" name="R1-2">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-3" class="form-label">9.S+EE</label>
+                                                <input type="text" class="form-control" id="R1-3" placeholder="Enter Answer" name="R1-3">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">10.CHI+CK</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">11.QUA+L</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">12.PI+CK</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-1" class="form-label">13.J+ACK</label>
+                                                <input type="text" class="form-control" id="R1-1" placeholder="Enter Answer" name="R1-1">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-2" class="form-label">14.KI+LL</label>
+                                                <input type="text" class="form-control" id="R1-2" placeholder="Enter Answer" name="R1-2">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-3" class="form-label">15.PE+T</label>
+                                                <input type="text" class="form-control" id="R1-3" placeholder="Enter Answer" name="R1-3">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">16.ME+T</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">17.N+OR</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">18.TOO+L</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-1" class="form-label">19.QUEE+N</label>
+                                                <input type="text" class="form-control" id="R1-1" placeholder="Enter Answer" name="R1-1">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-2" class="form-label">20.POO+L</label>
+                                                <input type="text" class="form-control" id="R1-2" placeholder="Enter Answer" name="R1-2">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-3" class="form-label">21.ME+N</label>
+                                                <input type="text" class="form-control" id="R1-3" placeholder="Enter Answer" name="R1-3">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">22.C+ALL</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">23.CU+T</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                            <div class="col-lg-2 col-sm-12 mt-3">
+                                                <label for="R1-4" class="form-label">24.SHU+T</label>
+                                                <input type="text" class="form-control" id="R1-4" placeholder="Enter Answer" name="R1-4">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- <div class="mt-5">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination pagination-sm justify-content-center">
+                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                                <li class="page-item"><a class="page-link" href="FO_book.html">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div> -->
+                                </div>
+                                <!-- .card body -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="component.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- https://demo.adminkit.io/tables-bootstrap.html -->

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <!-- bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <!-- template -->
+    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+    <title>Osam Template</title>
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- custom -->
+    <link href="common.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+    <nav id="sidebar" class="sidebar js-sidebar">
+        <div class="sidebar-content js-simplebar">
+            <a class="sidebar-brand" href="index.html">
+                <span class="align-middle">User</span>
+            </a>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html">
+                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-header">교재관리</li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="FO_vocabulary.html">
+                        <span class="align-middle">단어장</span>
+                    </a>
+                </li>
+                <li class="sidebar-item active">
+                    <a class="sidebar-link" href="FO_grammar.html">
+                        <span class="align-middle">문법</span>
+                    </a>
+                </li>
+                <li class="sidebar-header">회원관리</li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="FO_homework.html">
+                        <span class="align-middle">숙제현황</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="FO_exam.html">
+                        <span class="align-middle">시험현황</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="FO_myPage.html">
+                        <span class="align-middle">내 정보관리</span>
+                    </a>
+                </li>
+                <li class="sidebar-header">게시판 관리</li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="FO_question.html">
+                        <span class="align-middle">1:1 문의</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="FO_qna.html">
+                        <span class="align-middle">QnA</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+            <a class="sidebar-toggle js-sidebar-toggle">
+                <i class="hamburger align-self-center"></i>
+            </a>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav navbar-align">
+                    <li class="nav-item dropdown">
+                        <!-- 기존 -->
+                        <!-- <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown"> -->
+                        <!-- Bootstrap5 -->
+                        <a class="nav-icon" onclick="fn_dropdownToggle1();">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="bell"></i>
+                                <span class="indicator">4</span>
+                            </div>
+                        </a>
+                        <!-- 기존 -->
+                        <!-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown" id="dropdownTarget"> -->
+                        <!-- Bootstrap5 -->
+                        <div class="collapse dropdown-menu dropdown-menu-lg" id="dropdownTarget1" style="display: none;">
+                            <div class="dropdown-menu-header">
+                                4 New Notifications
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-danger" data-feather="alert-circle"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Update completed</div>
+                                            <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                            <div class="text-muted small mt-1">30m ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-warning" data-feather="bell"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Lorem ipsum</div>
+                                            <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                                            <div class="text-muted small mt-1">2h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-primary" data-feather="home"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Login from 192.186.1.8</div>
+                                            <div class="text-muted small mt-1">5h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-success" data-feather="user-plus"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">New connection</div>
+                                            <div class="text-muted small mt-1">Christina accepted your request.</div>
+                                            <div class="text-muted small mt-1">14h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a href="#" class="text-muted">Show all notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown" onclick="fn_dropdownToggle2();">
+                            <!-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />  -->
+                            <span class="text-dark">Name</span>
+                        </a>
+                        <!-- <div class="dropdown-menu dropdown-menu-end"> -->
+                        <div class="dropdown-menu dropdown-menu-end" id="dropdownTarget2" style="display: none;max-width: 160px;">
+                            <a class="dropdown-item" href="FO_myPage.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="FO_signin.html">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="container-fluid p-0">
+                <h1 class="h3 mb-3">Bridge 관계대명사와 접속사의 구분</h1>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form id="w1">
+                                    <div style="display: flex;align-items: center;">
+                                        <p style="margin: 0;"><strong>주어진 문장을 밑줄에 영어로 쓰고 검은색으로 표기 된 어절이 접속사 활용인지 관계대명사 활용인지를 구별하여 선택하세요.</strong></p>
+                                        <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px;">채점하기</button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-1" class="form-label m-0">1.나는 너가 하늘을 날 수 있을 거라는 생각이 이해가 가지 않는다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-1" placeholder="Enter Answer" name="w-1">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-2" class="form-label m-0">2.네가 내 머리 속에서 만들어 낸 상상은 결정하기에 불필요한 요소일 뿐이다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-2" placeholder="Enter Answer" name="w-2">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">3.그 회사의 임원들은 그들이 영어를 반드시 공부해야만 한다는 필요를 느끼고 있다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">4.그들이 오래 전에 들었던 진실은 거짓으로 판명되었다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">5.그들의 주장이 옳을 것이라는 그러한 논리는 도대체 어디서 왔느냐?</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">6.그 친절한 시민이 진짜 범인이라는 진실은 결국, 법정에서 모두 알려지게 되었다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">7.그 국회의원은 이 국회 내의 모두가 동의하는 사실을 부인했다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">8.먼 미래에 모든 사람들이 진짜 음식 대신에 알약을 먹는다는 상상은 현실이 되어가고 있다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">9.그 박사와 연구자들은 그들이 10년 동안 연구해왔던 완벽한 이론을 위해 최선을 했다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">10.그가 그 주민들을 구하려 왔다는 이야기는 작년에 영화로 만들어졌다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">11.그 운전자는 그가 취한채로 그 사람을 치었다는 사실을 경찰서에서 고백하였다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">12.그 전자가 원자의 주변을 돌고 있다는 이론은 너무나 충격적이었다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">13.많은 사람들이 그의 제자들이 1000년 동안 지켜욌던 굳건한 믿음을 칭송하고 있다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">14.그 과학자는 언젠가는 인류가 우주를 날아 달의 표면에 도착한다는 생각을 책에다 썼다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">15.그 선생은 첫째로 기본을 다져지고 그 위에 실력을 쌓아진다는 당연한 논리를 말하고 있다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">16.그 상인들은 그들의 거래 속에 거짓이 없을 것이라는 믿음을 통해 관계를 만들어 왔다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">17.곧 가뭄이 그 나라에 도래할 것이라는 소문은 온 나라에 퍼져가고 있다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">18.그 형제들은 그 자매들이 톱으로 그들 자신의 발을 자른다는 괴상한 이야기를 그들의 일기에 기록하였다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">19.그 구조대는 그 희생자들이 그 폐허 밑에서 생존해 있을 거라는 희망으로 그곳으로 출발했다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 mt-3">
+                                            <div class="input-group" style="align-items: center;margin-bottom: 10px;">
+                                                <label for="w-3" class="form-label m-0">20.대통령은 그 감염된 보균자들이 국경을 넘는다는 소문에 대하여 듣고 있다.</label>
+                                                <select class="form-select" style="max-width: 200px;margin-left: 10px;">
+                                                    <option>선택하세요</option>
+                                                    <option>접속사</option>
+                                                    <option>관계대명사</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control" id="w-3" placeholder="Enter Answer" name="w-3">
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- <div class="mt-5">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination pagination-sm justify-content-center">
+                                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                            <li class="page-item"><a class="page-link" href="FO_book.html">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                        </ul>
+                                    </nav>
+                                </div> -->
+                            </div>
+                            <!-- .card body -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="component.js"></script>
+<script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- https://demo.adminkit.io/tables-bootstrap.html -->
